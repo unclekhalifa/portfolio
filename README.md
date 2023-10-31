@@ -16,5 +16,5 @@
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=pastc&show_icons=true&theme=graywhite&locale=en&layout=compact" alt="pastc" /></p>
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api?username=pastc&show_icons=true&theme=graywhit&locale=en" alt="pastc" /></p>
+<p><img align="center" src="https://github-readme-stats.vercel.app/api?username=pastc&show_icons=true&theme=graywhite&locale=en" alt="pastc" /></p>
 
