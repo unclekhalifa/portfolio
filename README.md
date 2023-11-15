@@ -1,20 +1,18 @@
-<h1 align="center">Hi 👋, I'm Tahir Murata</h1>
-<h3 align="center">A passionate backend developer from Japan</h3>
+# Hi there!
+I'm Tahir. Welcome to my profile!
 
-- 🔭 I’m currently working on [f3s](https://github.com/pastc/f3s)
+### About me
+I'm a student from Japan who is particularly passionate about programming - especially in C#.
 
-- 🌱 I’m currently learning **ASP.NET**
+### Stats 
 
-- 👨‍💻 All of my projects are available at [tahir.sh](https://tahir.sh)
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-</p>
-
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://golang.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
-
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=pastc&show_icons=true&theme=graywhite&locale=en&layout=compact" alt="pastc" /></p>
-
-<p><img align="center" src="https://github-readme-stats.vercel.app/api?username=pastc&show_icons=true&theme=graywhite&locale=en" alt="pastc" /></p>
-
+<table>
+  <tr>
+    <td align="center" style="padding=0;width=50%;">
+      <img src="https://github-readme-stats.vercel.app/api/?username=pastc&show_icons=true&hide_border=true&hide_title=true&theme=graywhite" />
+    </td>
+    <td align="center" style="padding=0;width=50%;">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pastc&layout=compact&show_icons=true&hide_border=true&count_private=true&theme=graywhite" />
+    </td>
+  </tr>
+</table>
