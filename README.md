@@ -9,10 +9,10 @@ I'm a student from Japan who is particularly passionate about programming - espe
 <table>
   <tr>
     <td align="center" style="padding=0;width=50%;">
-      <img src="https://github-readme-stats.vercel.app/api/?username=pastc&show_icons=true&hide_border=true&hide_title=true&theme=graywhite" />
+      <img src="https://github-readme-stats.vercel.app/api/?username=pastc&show_icons=true&hide_border=true&hide_title=true&theme=dracula" />
     </td>
     <td align="center" style="padding=0;width=50%;">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pastc&layout=compact&show_icons=true&hide_border=true&count_private=true&theme=graywhite" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pastc&layout=compact&show_icons=true&hide_border=true&count_private=true&theme=dracula" />
     </td>
   </tr>
 </table>
