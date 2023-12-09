@@ -2,7 +2,7 @@
 I'm Tahir. Welcome to my profile!
 
 ### About me
-I'm a student who is passionate about programming - especially in Golang and Rust.
+I'm a student who is passionate about programming - especially in Golang and TypeScript.
 
 ### Stats 
 
