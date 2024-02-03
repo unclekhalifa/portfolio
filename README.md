@@ -6,6 +6,7 @@ I'm a student who is passionate about programming - especially in Golang and Typ
 
 ### Stats 
 
+<div align="center">
 <table style="margin-left:auto;margin-right:auto">
   <tr>
     <td align="center" style="padding:0;width:50%;">
@@ -16,3 +17,4 @@ I'm a student who is passionate about programming - especially in Golang and Typ
     </td>
   </tr>
 </table>
+</div>
