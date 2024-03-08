@@ -4,6 +4,7 @@ I'm Tahir. Welcome to my profile!
 ### About me
 I'm a student who is passionate about programming - especially in Golang and TypeScript.
 
+<!--
 ### Stats 
 
 <div align="center">
@@ -18,3 +19,4 @@ I'm a student who is passionate about programming - especially in Golang and Typ
   </tr>
 </table>
 </div>
+-->
