@@ -11,10 +11,10 @@
         </div>
       </header>
       <div
-        class="fixed z-0 h-[134px] w-[134px] lg:w-[300px] lg:h-[300px] rounded-full bg-primary blur-[150px] md:blur-[350px] opacity-50 left-0 top-0">
+        class="fixed z-0 h-[134px] w-[134px] sm:w-[200px] sm:h-[200px] lg:w-[300px] lg:h-[300px] rounded-full bg-primary blur-[150px] sm:blur-[350px] opacity-50 left-0 top-0">
       </div>
       <div
-        class="fixed z-0 h-[134px] w-[134px] lg:w-[300px] lg:h-[300px] rounded-full bg-secondary blur-[150px] md:blur-[350px] opacity-50 right-0 bottom-0">
+        class="fixed z-0 h-[134px] w-[134px] sm:w-[200px] sm:h-[200px] lg:w-[300px] lg:h-[300px] rounded-full bg-secondary blur-[150px] sm:blur-[350px] opacity-50 right-0 bottom-0">
       </div>
       <router-view></router-view>
     </div>
