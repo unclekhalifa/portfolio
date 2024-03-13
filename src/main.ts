@@ -9,6 +9,7 @@ import Projects from "./pages/Projects.vue";
 
 const routes = [
   { path: "/", component: Home },
+  { path: "/posts/:id", component: Posts },
   { path: "/posts", component: Posts },
   { path: "/projects", component: Projects },
 ];

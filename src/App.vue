@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="mx-auto flex min-h-screen max-w-4xl flex-col gap-9 px-10 py-8 text-base-content md:gap-20 md:py-16">
-      <header class="z-40 flex w-full flex-col gap-3 sm:gap-2 md:flex-row md:justify-between text-neutral-content">
+      <header
+        class="z-40 flex w-full flex-col gap-3 sm:gap-2 md:flex-row md:justify-between pb-5 md:pb-0 text-neutral-content">
         <span class="text-xl">Tahir Murata</span>
         <div className="text-sm custom-breadcrumbs">
           <ul>
