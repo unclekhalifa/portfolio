@@ -14,7 +14,7 @@ const years = computed(() => {
     <article class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-12">
       <div class="flex flex-col gap-8">
         <h1 class="text-3xl">Hi, I’m Tahir</h1>
-        <h2 class="w-auto max-w-[80%] leading-6 text-neutral-content">Hello, I am a
+        <h2 class="w-auto md:max-w-[80%] leading-6 text-neutral-content">Hello, I am a
           <strong class="font-normal text-accent">Japanese backend developer</strong>
           with over
           <strong class="font-normal text-accent">{{ years }} year</strong>
@@ -100,63 +100,3 @@ const years = computed(() => {
     </article>
   </div>
 </template>
-
-<style scoped>
-.custom-breadcrumbs {
-  max-width: 100%;
-  overflow-x: auto;
-  padding-top: 0.5%;
-}
-
-.custom-breadcrumbs>ul {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  min-height: min-content;
-}
-
-.custom-breadcrumbs>ul>li {
-  display: flex;
-  align-items: center;
-}
-
-.custom-breadcrumbs>ul>li>a {
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-}
-
-@media (hover:hover) {
-
-  .custom-breadcrumbs>ul>li>a:hover {
-    text-decoration-line: underline;
-  }
-}
-
-.custom-breadcrumbs>ul>li>a:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.custom-breadcrumbs>ul>li>a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
-}
-
-.custom-breadcrumbs>ul>li+*:before {
-  content: "/";
-  margin-left: 0.5rem
-    /* 8px */
-  ;
-  margin-right: 0.75rem
-    /* 12px */
-  ;
-  display: block;
-  opacity: 0.4;
-  background-color: transparent;
-}
-
-[dir="rtl"] .custom-breadcrumbs>ul>li+*:before {
-  --tw-rotate: -180deg;
-}
-</style>
