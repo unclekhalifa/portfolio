@@ -64,12 +64,12 @@ const years = computed(() => {
         </router-link>
       </header>
       <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 mx-auto">
+        <Box title="Writing my gambling library in Golang" subTitle="Tahir Murata"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla risus vel velit egestas, eleifend volutpat risus semper."
+          url="/posts/1" />
         <Box title="Lorem Ipsum" subTitle="Cicero"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla risus vel velit egestas, eleifend volutpat risus semper. Aenean eu nulla ut augue euismod ornare vel a urna."
-          url="404" />
-        <Box title="Lorem Ipsum" subTitle="Cicero"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla risus vel velit egestas, eleifend volutpat risus semper. Aenean eu nulla ut augue euismod ornare vel a urna."
-          url="404" />
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla risus vel velit egestas, eleifend volutpat risus semper."
+          url="/404" />
       </section>
     </article>
 
