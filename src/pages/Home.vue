@@ -44,6 +44,20 @@ const years = computed(() => {
 
     <article class="flex flex-col gap-8">
       <header class="flex w-full flex-row justify-between gap-2">
+        <h3 class="text-lg">Featured projects</h3>
+        <router-link to="/projects" class="text-neutral-content text-sm underline decoration-dashed underline-offset-8"
+          target="_self" rel="noreferrer">See all projects
+        </router-link>
+      </header>
+      <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-center items-stretch">
+        <Box title="Vero" url="https://github.com/pastc/vero"
+          :tags="['golang', 'algorithm', 'provably-fair', 'hash']" />
+        <Box title="Petch" url="https://github.com/pastc/petch" :tags="['golang', 'screenfetch']" />
+      </section>
+    </article>
+
+    <article class="flex flex-col gap-8">
+      <header class="flex w-full flex-row justify-between gap-2">
         <h3 class="text-lg">Latest posts</h3>
         <router-link to="/posts" class="text-neutral-content text-sm underline decoration-dashed underline-offset-8"
           rel="noreferrer">See all posts
@@ -56,26 +70,6 @@ const years = computed(() => {
         <Box title="Lorem Ipsum" subTitle="Cicero"
           content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla risus vel velit egestas, eleifend volutpat risus semper. Aenean eu nulla ut augue euismod ornare vel a urna."
           url="404" />
-        <Box title="Lorem Ipsum" subTitle="Cicero"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla risus vel velit egestas, eleifend volutpat risus semper. Aenean eu nulla ut augue euismod ornare vel a urna."
-          url="404" />
-        <Box title="Lorem Ipsum" subTitle="Cicero"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla risus vel velit egestas, eleifend volutpat risus semper. Aenean eu nulla ut augue euismod ornare vel a urna."
-          url="404" />
-      </section>
-    </article>
-
-    <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg">Featured projects</h3>
-        <router-link to="/projects" class="text-neutral-content text-sm underline decoration-dashed underline-offset-8"
-          target="_self" rel="noreferrer">See all projects
-        </router-link>
-      </header>
-      <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-center items-stretch">
-        <Box title="Vero" url="https://github.com/pastc/vero"
-          :tags="['golang', 'algorithm', 'provably-fair', 'hash']" />
-        <Box title="Petch" url="https://github.com/pastc/petch" :tags="['golang', 'screenfetch']" />
       </section>
     </article>
 
