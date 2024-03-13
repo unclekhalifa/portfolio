@@ -12,7 +12,7 @@ const years = computed(() => {
 <template>
   <div class="flex flex-col gap-20">
     <article class="md:flex-row-reverse md:justify-end md:gap-12">
-      <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-6 md:gap-8">
         <h1 class="text-3xl">Hi, I’m Tahir</h1>
         <h2 class="w-auto md:max-w-[80%] leading-6 text-neutral-content">I am a <strong
             class="font-normal text-accent">Japanese backend developer</strong> with over
@@ -22,6 +22,11 @@ const years = computed(() => {
         </h2>
         <div class="custom-breadcrumbs text-neutral-content">
           <ul>
+            <li>
+              <a href="https://twitter.com/_pastc" rel="noreferrer" target="_blank">
+                Twitter
+              </a>
+            </li>
             <li>
               <a href="https://github.com/pastc" rel="noreferrer" target="_blank">
                 Github
@@ -74,22 +79,25 @@ const years = computed(() => {
       </section>
     </article>
 
-    <article class="flex flex-col gap-8">
+    <!-- <article class="flex flex-col gap-6">
       <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg">Get in touch</h3>
+        <h3 class="text-lg">Socials</h3>
       </header>
-      <section class="flex flex-col gap-6">
-        <h1 class="text-neutral-content">Follow me via my social links.</h1>
-        <div class="text-neutral-content custom-breadcrumbs">
-          <ul>
-            <li>
-              <a href="https://twitter.com/_pastc" rel="noreferrer" target="_blank">
-                Twitter
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </article>
+      <h1 class="text-neutral-content">Follow me via my social links.</h1>
+      <div class="text-neutral-content custom-breadcrumbs">
+        <ul>
+          <li>
+            <a href="https://github.com/pastc" rel="noreferrer" target="_blank">
+              Github
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/_pastc" rel="noreferrer" target="_blank">
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+    </article> -->
   </div>
 </template>
