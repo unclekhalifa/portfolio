@@ -14,7 +14,7 @@ const years = computed(() => {
     <article class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-12">
       <div class="flex flex-col gap-8">
         <h1 class="text-3xl">Hi, I’m Tahir</h1>
-        <h2 class="w-auto max-w-[80%] leading-6">Hello, I am a
+        <h2 class="w-auto max-w-[80%] leading-6 text-neutral-content">Hello, I am a
           <strong class="font-normal text-accent">Japanese backend developer</strong>
           with over
           <strong class="font-normal text-accent">{{ years }} year</strong>
@@ -22,7 +22,7 @@ const years = computed(() => {
           <strong class="font-normal text-accent">Golang and Typescript</strong>
           . Outside of programming I like to gamble and take photographs.
         </h2>
-        <div class="custom-breadcrumbs">
+        <div class="custom-breadcrumbs text-neutral-content">
           <ul>
             <li>
               <a href="https://github.com/pastc" rel="noreferrer" target="_blank">
