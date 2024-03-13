@@ -2,13 +2,15 @@ import { createApp } from "vue";
 import "./style.css";
 import { createRouter, createWebHashHistory } from "vue-router";
 import "./style.css";
-import HelloWorld from "./components/HelloWorld.vue";
 import App from "./App.vue";
-import Home from "./components/Home.vue";
+import Home from "./pages/Home.vue";
+import Posts from "./pages/Posts.vue";
+import Projects from "./pages/Projects.vue";
 
 const routes = [
   { path: "/", component: Home },
-  { path: "/hello", component: HelloWorld },
+  { path: "/posts", component: Posts },
+  { path: "/projects", component: Projects },
 ];
 
 const router = createRouter({
