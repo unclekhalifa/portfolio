@@ -15,7 +15,7 @@ const years = computed(() => {
       <div class="flex flex-col gap-6 md:gap-8">
         <h1 class="text-3xl">Hi, I’m Tahir</h1>
         <h2 class="w-auto md:max-w-[80%] leading-6 text-neutral-content">I am a <strong
-            class="font-normal text-accent">Japanese backend developer</strong> with over
+            class="font-normal text-accent">Japanese student developer</strong> with over
           <strong class="font-normal text-accent">{{ years }} year</strong> of experience. I am currently working
           with<strong class="font-normal text-accent"> Golang and Typescript</strong>.
           Outside of programming I like to game and take photographs.
