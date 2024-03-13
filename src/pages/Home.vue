@@ -17,8 +17,8 @@ const years = computed(() => {
         <h2 class="w-auto md:max-w-[80%] leading-6 text-neutral-content">I am a <strong
             class="font-normal text-accent">Japanese backend developer</strong> with over
           <strong class="font-normal text-accent">{{ years }} year</strong> of experience. I am currently working
-          with<strong class="font-normal text-accent"> Golang andTypescript</strong>.
-          Outside of programming I like to gamble and take photographs.
+          with<strong class="font-normal text-accent"> Golang and Typescript</strong>.
+          Outside of programming I like to game and take photographs.
         </h2>
         <div class="custom-breadcrumbs text-neutral-content">
           <ul>
