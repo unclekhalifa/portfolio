@@ -12,7 +12,7 @@ const posts = 1;
 onMounted(() => {
   if (route.params.id) {
     if (parseInt(route.params.id[0]) <= posts) {
-      import(/* @vite-ignore */`../posts/${route.params.id}.md?raw`).then((res) => {
+      import(/* @vite-ignore */`.../public/posts/${route.params.id}.md?raw`).then((res) => {
         img.value = res.default;
       }).catch((err) => {
         img.value = err;
