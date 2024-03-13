@@ -18,7 +18,7 @@ const years = computed(() => {
           <strong class="font-normal text-accent">Japanese backend developer</strong>
           with over
           <strong class="font-normal text-accent">{{ years }} year</strong>
-          of web experience. I am currently working with
+          of experience. I am currently working with
           <strong class="font-normal text-accent">Golang and Typescript</strong>
           . Outside of programming I like to gamble and take photographs.
         </h2>
