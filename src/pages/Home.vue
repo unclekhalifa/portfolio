@@ -11,16 +11,14 @@ const years = computed(() => {
 
 <template>
   <div class="flex flex-col gap-20">
-    <article class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-12">
+    <article class="md:flex-row-reverse md:justify-end md:gap-12">
       <div class="flex flex-col gap-8">
         <h1 class="text-3xl">Hi, I’m Tahir</h1>
-        <h2 class="w-auto md:max-w-[80%] leading-6 text-neutral-content">Hello, I am a
-          <strong class="font-normal text-accent">Japanese backend developer</strong>
-          with over
-          <strong class="font-normal text-accent">{{ years }} year</strong>
-          of experience. I am currently working with
-          <strong class="font-normal text-accent">Golang and Typescript</strong>
-          . Outside of programming I like to gamble and take photographs.
+        <h2 class="w-auto md:max-w-[80%] leading-6 text-neutral-content">I am a <strong
+            class="font-normal text-accent">Japanese backend developer</strong> with over
+          <strong class="font-normal text-accent">{{ years }} year</strong> of experience. I am currently working
+          with<strong class="font-normal text-accent"> Golang andTypescript</strong>.
+          Outside of programming I like to gamble and take photographs.
         </h2>
         <div class="custom-breadcrumbs text-neutral-content">
           <ul>
@@ -80,18 +78,13 @@ const years = computed(() => {
       <header class="flex w-full flex-row justify-between gap-2">
         <h3 class="text-lg">Get in touch</h3>
       </header>
-      <section class="flex flex-col gap-6 text-sm">
-        <h1 class="text-neutral-content">Email me at contact@tahir.sh</h1>
+      <section class="flex flex-col gap-6">
+        <h1 class="text-neutral-content">Follow me via my social links.</h1>
         <div class="text-neutral-content custom-breadcrumbs">
           <ul>
             <li>
-              <a href="https://github.com/pastc" rel="noreferrer" target="_blank">
-                Github
-              </a>
-            </li>
-            <li>
-              <a href="https://gitlab.com/paste" rel="noreferrer" target="_blank">
-                Gitlab
+              <a href="https://twitter.com/_pastc" rel="noreferrer" target="_blank">
+                Twitter
               </a>
             </li>
           </ul>
