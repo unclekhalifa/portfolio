@@ -18,7 +18,7 @@
           width: 150px;
           height: 150px;
           border-radius: 50%;
-          border: 10px solid rgb(13, 17, 23);
+          border: 10px solid white;
           margin: auto;
           top: 0;
           left: 0;
@@ -79,7 +79,7 @@
           }
         }
         .base:nth-child(2) .circ {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.05);
         }
 
         .base:nth-child(3) {
@@ -106,7 +106,7 @@
           }
         }
         .base:nth-child(3) .circ {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.05);
         }
 
         .base:nth-child(4) {
@@ -133,7 +133,7 @@
           }
         }
         .base:nth-child(4) .circ {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.05);
         }
 
         .base:nth-child(5) {
@@ -160,7 +160,7 @@
           }
         }
         .base:nth-child(5) .circ {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.05);
         }
 
         .base:nth-child(6) {
@@ -187,7 +187,7 @@
           }
         }
         .base:nth-child(6) .circ {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.05);
         }
 
         .base:nth-child(7) {
@@ -214,7 +214,7 @@
           }
         }
         .base:nth-child(7) .circ {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.05);
         }
 
         .base:nth-child(8) {
@@ -241,7 +241,7 @@
           }
         }
         .base:nth-child(8) .circ {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.05);
         }
       </style>
       <div class="base">
