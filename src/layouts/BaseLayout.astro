@@ -16,10 +16,10 @@ const currentPath = Astro.url.pathname;
   </head>
   <body>
     <div
-      class="mx-auto flex min-h-screen max-w-4xl flex-col gap-9 px-10 py-8 text-base-content md:gap-20 md:py-16"
+      class="z-40 mx-auto flex min-h-screen max-w-4xl flex-col gap-9 px-10 py-8 text-base-content md:gap-20 md:py-16"
     >
       <header
-        class="z-40 flex w-full flex-col gap-3 md:gap-2 md:flex-row md:justify-between pb-5 md:pb-0 text-neutral-content"
+        class="flex w-full flex-col gap-3 md:gap-2 md:flex-row md:justify-between pb-5 md:pb-0 text-neutral-content"
       >
         <a href="/" class="text-xl">Tahir Murata</a>
         <div class="text-sm custom-breadcrumbs">
@@ -47,11 +47,11 @@ const currentPath = Astro.url.pathname;
         </div>
       </header>
       <div
-        class="fixed z-0 h-[150px] w-[150px] sm:w-[200px] sm:h-[200px] md:w-[220px] md:h-[220px] xl:w-[260px] xl:h-[260px] rounded-full bg-primary blur-[150px] opacity-30 left-10 top-10"
+        class="pointer-events-none fixed z-0 h-[150px] w-[150px] sm:w-[200px] sm:h-[200px] md:w-[220px] md:h-[220px] xl:w-[260px] xl:h-[260px] rounded-full bg-primary blur-[150px] opacity-30 left-10 top-10"
       >
       </div>
       <div
-        class="fixed z-0 h-[150px] w-[150px] sm:w-[200px] sm:h-[200px] md:w-[220px] md:h-[220px] xl:w-[260px] xl:h-[260px] rounded-full bg-secondary blur-[150px] opacity-30 right-10 bottom-10"
+        class="pointer-events-none fixed z-0 h-[150px] w-[150px] sm:w-[200px] sm:h-[200px] md:w-[220px] md:h-[220px] xl:w-[260px] xl:h-[260px] rounded-full bg-secondary blur-[150px] opacity-30 right-10 bottom-10"
       >
       </div>
       <slot />
