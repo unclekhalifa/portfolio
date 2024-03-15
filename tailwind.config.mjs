@@ -4,30 +4,36 @@ export default {
   theme: {
     extend: {
       animation: {
-        blob_primary: "primary 7s infinite ease",
-        blob_secondary: "secondary 7s infinite ease",
+        blob_primary: "float_primary 6s ease-in-out infinite",
+        blob_secondary: "float_secondary 5s ease-in-out infinite",
       },
       keyframes: {
-        primary: {
+        float_secondary: {
           "0%, 100%": {
-            transform: "translate(20px, 10px) scale(1)",
+            transform: "translate(0, 0)",
           },
-          "33%": {
-            transform: "translate(30px, 15px) scale(1.2)",
+          "25%": {
+            transform: "translate(12px, -12px)",
           },
-          "66%": {
-            transform: "translate(10px, 20px) scale(1.3)",
+          "50%": {
+            transform: "translate(18, -18px)",
+          },
+          "75%": {
+            transform: "translate(-12px, -12px)",
           },
         },
-        secondary: {
+        float_primary: {
           "0%, 100%": {
-            transform: "translate(8px, -2px) scale(1.1)",
+            transform: "translate(10, -10)",
           },
-          "33%": {
-            transform: "translate(30px, -2px) scale(1)",
+          "25%": {
+            transform: "translate(-12px, 12px)",
           },
-          "66%": {
-            transform: "translate(20px, 10px) scale(1)",
+          "50%": {
+            transform: "translate(-18, 18px)",
+          },
+          "75%": {
+            transform: "translate(12px, 12px)",
           },
         },
       },
