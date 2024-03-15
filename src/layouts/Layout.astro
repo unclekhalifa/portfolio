@@ -3,12 +3,12 @@ const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
-<html data-theme="sunset" class="bg-base-200 overflow-y-scroll" lang="en">
+<html class="bg-base-200 overflow-y-scroll" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="I am a Japanese student developer with over 2 years of experience. I am currently working with Golang and Typescript. Outside of programming I like to game and take photographs."
+      content="Tahir Murata is a Japanese student developer with over 2 years of experience. He is currently working with Golang and Typescript. Outside of programming he likes to game and take photographs."
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
@@ -37,24 +37,9 @@ const currentPath = Astro.url.pathname;
                 href="/posts">Posts</a
               >
             </li>
-            <li>
-              <a
-                class={currentPath === "/projects" ? "text-base-content" : ""}
-                href="/projects">Projects</a
-              >
-            </li>
           </ul>
         </div>
       </header>
-      <!-- sm:w-[200px] sm:h-[200px] md:w-[220px] md:h-[220px] xl:w-[260px] xl:h-[260px] -->
-      <!-- <div
-        class="pointer-events-none fixed z-0 size-0 lg:size-52 xl:size-64 rounded-full bg-primary blur-[150px] opacity-30 left-10 top-10"
-      >
-      </div>
-      <div
-        class="pointer-events-none fixed z-0 size-0 lg:size-52 xl:size-64 rounded-full bg-secondary blur-[150px] opacity-30 right-10 bottom-10"
-      >
-      </div> -->
       <slot />
     </div>
   </body>

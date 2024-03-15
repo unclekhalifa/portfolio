@@ -22,7 +22,7 @@ const posts = (await getCollection("posts")).sort(function (
     <div class="flex flex-col gap-20">
       <article class="md:flex-row-reverse md:justify-end md:gap-12">
         <div class="grid grid-cols-1 sm:grid-cols-2">
-          <div class="flex flex-col gap-6 md:gap-8">
+          <div class="flex flex-col gap-6 md:gap-8 my-auto">
             <h1 class="text-3xl">Hi, I’m Tahir</h1>
             <h2 class="w-auto leading-6 text-neutral-content">
               I am a <strong class="font-normal text-accent"
@@ -67,14 +67,11 @@ const posts = (await getCollection("posts")).sort(function (
               </ul>
             </div>
           </div>
-          <div class="mx-auto mt-5 blur-2xl">
-            <div
-              class="absolute z-0 size-0 sm:size-40 rounded-full bg-primary mix-blend-normal filter animate-blob_primary"
-            >
-            </div>
-            <div
-              class="absolute z-0 size-0 sm:size-40 rounded-full bg-secondary mix-blend-normal filter animate-blob_secondary"
-            >
+          <div class="ml-auto hidden sm:block">
+            <div class="avatar">
+              <div class="size-60 rounded-lg">
+                <img src="/icon.jpg" />
+              </div>
             </div>
           </div>
         </div>
@@ -84,7 +81,7 @@ const posts = (await getCollection("posts")).sort(function (
         <header class="flex w-full flex-row justify-between gap-2">
           <h3 class="text-lg">Featured projects</h3>
           <a
-            href="/projects"
+            href="https://github.com/pastc?tab=repositories"
             class="text-neutral-content text-sm underline decoration-dashed underline-offset-8"
             target="_self"
             rel="noreferrer"
