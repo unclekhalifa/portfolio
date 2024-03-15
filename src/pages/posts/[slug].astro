@@ -1,7 +1,6 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -12,15 +11,11 @@ export async function getStaticPaths() {
   }));
 }
 
-type Props = {
-  post: CollectionEntry<"posts">;
-};
-
 const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description}>
+<Layout title={post.data.title} description={post.data.description}>
   <article class="prose mx-auto flex w-full max-w-prose flex-col gap-4">
     <h1 class="mb-0">
       {post.data.title}
@@ -29,4 +24,4 @@ const { Content } = await post.render();
     <div class="divider m-0"></div>
     <Content />
   </article>
-</BaseLayout>
+</Layout>
