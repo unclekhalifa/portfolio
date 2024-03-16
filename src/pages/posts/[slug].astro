@@ -20,11 +20,9 @@ const { Content } = await post.render();
 <Layout
   title={post.data.title}
   description={post.data.description}
-  og={{
-    title: post.data.title,
-    description: post.data.description,
-    type: "article",
-  }}
+  og_title={post.data.title}
+  og_description={post.data.description}
+  og_type="article"
 >
   <article class="prose mx-auto flex w-full max-w-prose flex-col gap-4">
     <h1 class="mb-0">

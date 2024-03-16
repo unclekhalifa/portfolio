@@ -9,11 +9,7 @@ const posts = (await getCollection("posts")).sort(
 );
 ---
 
-<Layout
-  og={{
-    type: "website",
-  }}
->
+<Layout og_type="website">
   <div>
     {
       posts.map((post) => (

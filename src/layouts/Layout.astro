@@ -4,25 +4,19 @@ import { ViewTransitions } from "astro:transitions";
 interface Props {
   title?: string;
   description?: string;
-  og?: ogProps;
-}
-
-interface ogProps {
-  title?: string;
-  description?: string;
-  type?: string;
-  image?: string;
+  og_title?: string;
+  og_description?: string;
+  og_type?: string;
+  og_image?: string;
 }
 
 const {
   title = "Tahir Murata",
   description = "Tahir Murata's personal website.",
-  og = {
-    title: "Tahir Murata",
-    description: "Tahir Murata's personal website.",
-    type: "website",
-    image: "/og.webp",
-  },
+  og_title = "Tahir Murata",
+  og_description = "Tahir Murata's personal website.",
+  og_type = "website",
+  og_image = "/og.webp",
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
@@ -36,10 +30,10 @@ const currentPath = Astro.url.pathname;
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta property="og:title" content={og.title} />
-    <meta property="og:description" content={og.description} />
-    <meta property="og:type" content={og.type} />
-    <meta property="og:image" content={og.image} />
+    <meta property="og:title" content={og_title} />
+    <meta property="og:description" content={og_description} />
+    <meta property="og:type" content={og_type} />
+    <meta property="og:image" content={og_image} />
     <meta property="og:url" content={Astro.request.url} />
     <ViewTransitions />
   </head>
@@ -71,58 +65,59 @@ const currentPath = Astro.url.pathname;
       </header>
       <slot />
     </div>
-  </body><style is:global>
-    .custom-breadcrumbs {
-      max-width: 100%;
-      overflow-x: auto;
-      padding-top: 0.5%;
-    }
-
-    .custom-breadcrumbs > ul {
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-      min-height: min-content;
-    }
-
-    .custom-breadcrumbs > ul > li {
-      display: flex;
-      align-items: center;
-    }
-
-    .custom-breadcrumbs > ul > li > a {
-      display: flex;
-      cursor: pointer;
-      align-items: center;
-    }
-
-    @media (hover: hover) {
-      .custom-breadcrumbs > ul > li > a:hover {
-        text-decoration-line: underline;
+    <style is:global>
+      .custom-breadcrumbs {
+        max-width: 100%;
+        overflow-x: auto;
+        padding-top: 0.5%;
       }
-    }
 
-    .custom-breadcrumbs > ul > li > a:focus {
-      outline: 2px solid transparent;
-      outline-offset: 2px;
-    }
+      .custom-breadcrumbs > ul {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        min-height: min-content;
+      }
 
-    .custom-breadcrumbs > ul > li > a:focus-visible {
-      outline: 2px solid currentColor;
-      outline-offset: 2px;
-    }
+      .custom-breadcrumbs > ul > li {
+        display: flex;
+        align-items: center;
+      }
 
-    .custom-breadcrumbs > ul > li + *:before {
-      content: "/";
-      margin-left: 0.5rem /* 8px */;
-      margin-right: 0.75rem /* 12px */;
-      display: block;
-      opacity: 0.4;
-      background-color: transparent;
-    }
+      .custom-breadcrumbs > ul > li > a {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+      }
 
-    [dir="rtl"] .custom-breadcrumbs > ul > li + *:before {
-      --tw-rotate: -180deg;
-    }
-  </style>
+      @media (hover: hover) {
+        .custom-breadcrumbs > ul > li > a:hover {
+          text-decoration-line: underline;
+        }
+      }
+
+      .custom-breadcrumbs > ul > li > a:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+
+      .custom-breadcrumbs > ul > li > a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+      }
+
+      .custom-breadcrumbs > ul > li + *:before {
+        content: "/";
+        margin-left: 0.5rem /* 8px */;
+        margin-right: 0.75rem /* 12px */;
+        display: block;
+        opacity: 0.4;
+        background-color: transparent;
+      }
+
+      [dir="rtl"] .custom-breadcrumbs > ul > li + *:before {
+        --tw-rotate: -180deg;
+      }
+    </style>
+  </body>
 </html>
