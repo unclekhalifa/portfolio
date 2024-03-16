@@ -6,13 +6,13 @@ const currentPath = Astro.url.pathname;
 <html class="bg-base-200 overflow-y-scroll" lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <title>Tahir Murata</title>
     <meta
       name="description"
       content="Tahir Murata is a Japanese student developer with over 2 years of experience. He is currently working with Golang and Typescript. Outside of programming he likes to game and take photographs."
     />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-    <title>Tahir Murata</title>
   </head>
   <body>
     <div
@@ -42,58 +42,59 @@ const currentPath = Astro.url.pathname;
       </header>
       <slot />
     </div>
-  </body><style is:global>
-    .custom-breadcrumbs {
-      max-width: 100%;
-      overflow-x: auto;
-      padding-top: 0.5%;
-    }
-
-    .custom-breadcrumbs > ul {
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-      min-height: min-content;
-    }
-
-    .custom-breadcrumbs > ul > li {
-      display: flex;
-      align-items: center;
-    }
-
-    .custom-breadcrumbs > ul > li > a {
-      display: flex;
-      cursor: pointer;
-      align-items: center;
-    }
-
-    @media (hover: hover) {
-      .custom-breadcrumbs > ul > li > a:hover {
-        text-decoration-line: underline;
+    <style is:global>
+      .custom-breadcrumbs {
+        max-width: 100%;
+        overflow-x: auto;
+        padding-top: 0.5%;
       }
-    }
 
-    .custom-breadcrumbs > ul > li > a:focus {
-      outline: 2px solid transparent;
-      outline-offset: 2px;
-    }
+      .custom-breadcrumbs > ul {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        min-height: min-content;
+      }
 
-    .custom-breadcrumbs > ul > li > a:focus-visible {
-      outline: 2px solid currentColor;
-      outline-offset: 2px;
-    }
+      .custom-breadcrumbs > ul > li {
+        display: flex;
+        align-items: center;
+      }
 
-    .custom-breadcrumbs > ul > li + *:before {
-      content: "/";
-      margin-left: 0.5rem /* 8px */;
-      margin-right: 0.75rem /* 12px */;
-      display: block;
-      opacity: 0.4;
-      background-color: transparent;
-    }
+      .custom-breadcrumbs > ul > li > a {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+      }
 
-    [dir="rtl"] .custom-breadcrumbs > ul > li + *:before {
-      --tw-rotate: -180deg;
-    }
-  </style>
+      @media (hover: hover) {
+        .custom-breadcrumbs > ul > li > a:hover {
+          text-decoration-line: underline;
+        }
+      }
+
+      .custom-breadcrumbs > ul > li > a:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+
+      .custom-breadcrumbs > ul > li > a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+      }
+
+      .custom-breadcrumbs > ul > li + *:before {
+        content: "/";
+        margin-left: 0.5rem /* 8px */;
+        margin-right: 0.75rem /* 12px */;
+        display: block;
+        opacity: 0.4;
+        background-color: transparent;
+      }
+
+      [dir="rtl"] .custom-breadcrumbs > ul > li + *:before {
+        --tw-rotate: -180deg;
+      }
+    </style>
+  </body>
 </html>
