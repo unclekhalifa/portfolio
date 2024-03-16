@@ -17,7 +17,15 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  og={{
+    title: post.data.title,
+    description: post.data.description,
+    type: "article",
+  }}
+>
   <article class="prose mx-auto flex w-full max-w-prose flex-col gap-4">
     <h1 class="mb-0">
       {post.data.title}
