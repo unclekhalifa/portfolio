@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Icon Banner](https://tahir.sh/daniel-olah-6KQETG8J-zI-unsplash.jpg)][user_url]
+[![Icon Banner][user_logo_img]][user_url]
 
 # Tahir Murata
 
@@ -16,7 +16,7 @@ Outside of programming I like to game and take photographs.
 
 <!-- Image -->
 
-[user_logo_img]: https://tahir.sh/daniel-olah-6KQETG8J-zI-unsplash.jpg
+[user_logo_img]: ./src/assets/daniel-olah-6KQETG8J-zI-unsplash.jpg
 [twitter_logo_img]: https://flat.badgen.net/badge/twitter/_pastc/black?icon=twitter&label
 [github_logo_img]: https://flat.badgen.net/badge/github/pastc/black?icon=github&label
 [gitlab_logo_img]: https://flat.badgen.net/badge/gitlab/paste/black?icon=gitlab&label
