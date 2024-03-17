@@ -43,6 +43,6 @@ export const config: IConfig = {
     },
   },
   og: {
-    image: "./public/icon.png",
+    image: "/icon.png",
   },
 };
