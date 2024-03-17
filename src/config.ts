@@ -1,5 +1,3 @@
-import icon from "../src/assets/icon.png";
-
 interface IConfig {
   me: {
     name: string;
@@ -45,6 +43,6 @@ export const config: IConfig = {
     },
   },
   og: {
-    image: icon.src,
+    image: "./public/icon.png",
   },
 };

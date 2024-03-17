@@ -1,6 +1,6 @@
 # Astro Minimal Portfolio
 
-![just-the-basics](./src/assets/screenshot.png)
+[![Screenshot](./src/assets/screenshot.png)](https://minimal-portfolio.demo.tahir.sh/)
 
 ## Project Structure
 
