@@ -2,10 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import FloatingBox from "../components/SmallBox.astro";
 import { Picture } from "astro:assets";
-import iconImage from "../assets/icon.jpg";
+import iconImage from "../assets/icon.png";
+import { config } from "../config";
 
 const years = () => {
-  const start = new Date("2022-10-01");
+  const start = new Date(config.me.started);
   const now = new Date();
   return now.getFullYear() - start.getFullYear();
 };
@@ -25,49 +26,35 @@ const posts = (await getCollection("posts")).sort(function (
       <article class="md:flex-row-reverse md:justify-end md:gap-12">
         <div class="flex flex-row justify-between sm:grid-cols-3">
           <div class="col-span-2 flex flex-col gap-6 md:gap-8 my-auto">
-            <h1 class="text-3xl">Hi, I’m Tahir</h1>
-            <h2
-              class="w-auto sm:w-[85%] md:w-[90%] leading-6 text-neutral-content"
-            >
-              I am a <strong class="font-normal text-accent"
-                >Japanese student developer</strong
+            <h1 class="text-3xl">Hi, I’m {config.me.name.split(" ")[0]}</h1>
+            <h2 class="w-auto sm:w-[85%] md:w-[90%] leading-6">
+              I am a <strong class="font-normal text-primary"
+                >{config.me.job}</strong
               > with over
-              <strong class="font-normal text-accent">{years} years</strong> of experience.
-              I am currently working with<strong
-                class="font-normal text-accent"
+              <strong class="font-normal text-primary">{years} years</strong> of
+              experience. I am currently working with<strong
+                class="font-normal text-primary"
               >
-                Golang and Typescript</strong
-              >. Outside of programming I like to game and take photographs.
+                {config.me.stack}</strong
+              >. Outside of programming I like to {config.me.hobby}.
             </h2>
-            <div class="custom-breadcrumbs text-neutral-content">
+            <div class="custom-breadcrumbs">
               <ul>
-                <li>
-                  <a
-                    href="https://twitter.com/_pastc"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/pastc"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    Github
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://gitlab.com/paste"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    Gitlab
-                  </a>
-                </li>
+                {
+                  Object.keys(config.socials).map((social) => (
+                    <li>
+                      <a
+                        href={
+                          config.socials[social as keyof typeof config.socials]
+                        }
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {social.charAt(0).toUpperCase() + social.slice(1)}
+                      </a>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </div>
@@ -91,7 +78,7 @@ const posts = (await getCollection("posts")).sort(function (
           <h3 class="text-lg">Featured projects</h3>
           <a
             href="https://github.com/pastc?tab=repositories"
-            class="text-neutral-content text-sm underline decoration-dashed underline-offset-8"
+            class="text-sm text-primary underline decoration-dashed underline-offset-8"
             target="_self"
             rel="noreferrer"
             >See all projects
@@ -100,16 +87,19 @@ const posts = (await getCollection("posts")).sort(function (
         <section
           class="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-center items-stretch"
         >
-          <FloatingBox
-            title="Vero"
-            href="https://github.com/pastc/vero"
-            tags={["golang", "algorithm", "provably-fair", "hash"]}
-          />
-          <FloatingBox
-            title="Petch"
-            href="https://github.com/pastc/petch"
-            tags={["golang", "screenfetch"]}
-          />
+          {
+            Object.keys(config.projects).map((project) => (
+              <FloatingBox
+                title={
+                  config.projects[project as keyof typeof config.projects].name
+                }
+                href={project}
+                tags={
+                  config.projects[project as keyof typeof config.projects].tags
+                }
+              />
+            ))
+          }
         </section>
       </article>
 
@@ -118,7 +108,7 @@ const posts = (await getCollection("posts")).sort(function (
           <h3 class="text-lg">Latest posts</h3>
           <a
             href="/posts"
-            class="text-neutral-content text-sm underline decoration-dashed underline-offset-8"
+            class="text-sm text-primary underline decoration-dashed underline-offset-8"
             rel="noreferrer"
             >See all posts
           </a>

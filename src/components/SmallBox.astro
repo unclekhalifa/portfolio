@@ -17,11 +17,11 @@ const { title, publishedAt, description, href, tags } = Astro.props;
   data-astro-prefetch
 >
   <div class="flex w-full justify-between gap-3 flex-row items-start">
-    <p class="text-base-content font-semibold">{title}</p>
+    <p class="font-semibold">{title}</p>
     <div class="flex flex-row items-center gap-2">
       {
         publishedAt ? (
-          <p class="text-neutral-content whitespace-nowrap">
+          <p class="text-neutral whitespace-nowrap">
             {new Date(publishedAt).toLocaleDateString("en-us", {
               year: "numeric",
               month: "short",
@@ -54,7 +54,7 @@ const { title, publishedAt, description, href, tags } = Astro.props;
         ))}
       </div>
     ) : (
-      <p class="truncate text-neutral-content">{description}</p>
+      <p class="truncate">{description}</p>
     )
   }
 </a>
