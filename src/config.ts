@@ -1,4 +1,28 @@
-export const config = {
+import icon from "../src/assets/icon.png";
+
+interface IConfig {
+  me: {
+    name: string;
+    job: string;
+    started: string;
+    stack: string;
+    hobby: string;
+  };
+  socials: {
+    [name: string]: string;
+  };
+  projects: {
+    [name: string]: {
+      url: string;
+      tags: string[];
+    };
+  };
+  og: {
+    image: string;
+  };
+}
+
+export const config: IConfig = {
   me: {
     name: "John Doe",
     job: "backend engineer",
@@ -11,13 +35,16 @@ export const config = {
     github: "https://github.com/JohnDoe",
   },
   projects: {
-    "https://github.com/996icu/996.ICU": {
-      name: "996.ICU",
+    "996.ICU": {
+      url: "https://github.com/996icu/996.ICU",
       tags: ["ccp", "chinese", "overwork", "labor", "996"],
     },
-    "https://github.com/torvalds/linux": {
-      name: "Linux",
+    Linux: {
+      url: "https://github.com/torvalds/linux",
       tags: ["c", "kernel", "unix", "os"],
     },
+  },
+  og: {
+    image: icon.src,
   },
 };

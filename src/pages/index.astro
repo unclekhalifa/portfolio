@@ -90,10 +90,10 @@ const posts = (await getCollection("posts")).sort(function (
           {
             Object.keys(config.projects).map((project) => (
               <FloatingBox
-                title={
-                  config.projects[project as keyof typeof config.projects].name
+                title={project}
+                href={
+                  config.projects[project as keyof typeof config.projects].url
                 }
-                href={project}
                 tags={
                   config.projects[project as keyof typeof config.projects].tags
                 }

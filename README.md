@@ -1,29 +1,47 @@
-<div align="center">
+# Astro Minimal Portfolio
 
-[![Icon Banner][user_logo_img]][user_url]
+![just-the-basics](./src/assets/screenshot.png)
 
-# Tahir Murata
+## Project Structure
 
-[![Twitter][twitter_logo_img]][twitter_url]
-[![Github][github_logo_img]][github_url]
-[![Gitlab][gitlab_logo_img]][gitlab_url]
+```text
+portfolio/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── assets/
+│   │   └── icons, etc.
+│   ├── components/
+│   │   └── boxes
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   ├── posts/
+│   │   │   └── index.astro
+│   │   ├── index.astro
+│   │   └── 404.astro
+│   ├── content/
+│   │   ├── posts/
+│   │   │   ├── lorem-ipsum.md
+│   │   │   └── lorem-ipsum-2.md
+│   │   └── config.ts
+│   └── config.ts
+└── LICENSE
+```
 
-I am a Japanese student developer with over 2 years of experience.
-I am currently working with Golang and Typescript.
-Outside of programming I like to game and take photographs.
+Make sure to fill in the `config.ts` file in the `src` folder.
 
-</div>
+This project is build with TailwindCSS and DaisyUI so you can easily customize it.
 
-<!-- Image -->
+## Commands
 
-[user_logo_img]: ./src/assets/daniel-olah-6KQETG8J-zI-unsplash(1).jpg
-[twitter_logo_img]: https://flat.badgen.net/badge/twitter/_pastc/black?icon=twitter&label
-[github_logo_img]: https://flat.badgen.net/badge/github/pastc/black?icon=github&label
-[gitlab_logo_img]: https://flat.badgen.net/badge/gitlab/paste/black?icon=gitlab&label
+All commands are run from the root of the project, from a terminal:
 
-<!-- URL -->
-
-[user_url]: https://tahir.sh
-[twitter_url]: https://twitter.com/_pastc
-[github_url]: https://github.com/pastc
-[gitlab_url]: https://gitlab.com/paste
+| Command                    | Action                                           |
+| :------------------------- | :----------------------------------------------- |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm run build`           | Build your production site to `./dist/`          |
+| `pnpm run preview`         | Preview your build locally, before deploying     |
+| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
