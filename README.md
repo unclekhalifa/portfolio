@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Icon Banner][user_logo_img]][user_url]
+[![Icon Banner](https://tahir.sh/daniel-olah-6KQETG8J-zI-unsplash.jpg)][user_url]
 
 # Tahir Murata
 
