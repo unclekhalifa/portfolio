@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://tahir.sh" target="_blank" title="Go to portfolio website"><img width="196px" alt="gowebly logo" src="https://tahir.sh/og.webp"></a>
+<a href="https://tahir.sh" target="_blank" title="Go to portfolio website"><img width="196px" alt="desert under blue sky during daytime" src="https://tahir.sh/daniel-olah-6KQETG8J-zI-unsplash.jpg"></a>
 
 <a name="readme-top"></a>
 
