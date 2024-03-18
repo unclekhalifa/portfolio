@@ -22,7 +22,7 @@ interface IConfig {
   };
 }
 
-export const config: IConfig = {
+export const Config: IConfig = {
   me: {
     name: "John Doe",
     job: "backend engineer",

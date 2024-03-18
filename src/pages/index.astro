@@ -3,10 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import FloatingBox from "../components/SmallBox.astro";
 import { Picture } from "astro:assets";
 import iconImage from "../assets/icon.png";
-import { config } from "../config";
+import { Config } from "../config";
 
 const years = () => {
-  const start = new Date(config.me.started);
+  const start = new Date(Config.me.started);
   const now = new Date();
   return now.getFullYear() - start.getFullYear();
 };
@@ -26,26 +26,26 @@ const posts = (await getCollection("posts")).sort(function (
       <article class="md:flex-row-reverse md:justify-end md:gap-12">
         <div class="flex flex-row justify-between sm:grid-cols-3">
           <div class="col-span-2 flex flex-col gap-6 md:gap-8 my-auto">
-            <h1 class="text-3xl">Hi, I’m {config.me.name.split(" ")[0]}</h1>
+            <h1 class="text-3xl">Hi, I’m {Config.me.name.split(" ")[0]}</h1>
             <h2 class="w-auto sm:w-[85%] md:w-[90%] leading-6">
               I am a <strong class="font-normal text-primary"
-                >{config.me.job}</strong
+                >{Config.me.job}</strong
               > with over
               <strong class="font-normal text-primary">{years} years</strong> of
               experience. I am currently working with<strong
                 class="font-normal text-primary"
               >
-                {config.me.stack}</strong
-              >. Outside of programming I like to {config.me.hobby}.
+                {Config.me.stack}</strong
+              >. Outside of programming I like to {Config.me.hobby}.
             </h2>
             <div class="custom-breadcrumbs">
               <ul>
                 {
-                  Object.keys(config.socials).map((social) => (
+                  Object.keys(Config.socials).map((social) => (
                     <li>
                       <a
                         href={
-                          config.socials[social as keyof typeof config.socials]
+                          Config.socials[social as keyof typeof Config.socials]
                         }
                         rel="noreferrer"
                         target="_blank"
@@ -88,14 +88,14 @@ const posts = (await getCollection("posts")).sort(function (
           class="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-center items-stretch"
         >
           {
-            Object.keys(config.projects).map((project) => (
+            Object.keys(Config.projects).map((project) => (
               <FloatingBox
                 title={project}
                 href={
-                  config.projects[project as keyof typeof config.projects].url
+                  Config.projects[project as keyof typeof Config.projects].url
                 }
                 tags={
-                  config.projects[project as keyof typeof config.projects].tags
+                  Config.projects[project as keyof typeof Config.projects].tags
                 }
               />
             ))
