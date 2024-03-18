@@ -7,6 +7,7 @@ interface IConfig {
     started: string;
     stack: string;
     hobby: string;
+    projectLink: string;
   };
   socials: {
     [name: string]: string;
@@ -29,6 +30,7 @@ export const Config: IConfig = {
     started: "1970-01-01",
     stack: "Scratch",
     hobby: "gamble my life savings",
+    projectLink: "https://github.com/JohnDoe?tab=repositories",
   },
   socials: {
     twitter: "https://twitter.com/JohnDoe",
