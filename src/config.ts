@@ -39,7 +39,7 @@ export const Config: IConfig = {
     'Rate My CV': {
       // FIXME: Add the correct URL
       url: 'https://github.com/unclekhalifa',
-      tags: ['ccp', 'chinese', 'overwork', 'labor', '996'],
+      tags: ['react', 'firebase', 'sanity'],
     },
     Workbug: {
       url: 'https://apps.apple.com/gb/app/workbug/id1380295904',
