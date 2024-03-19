@@ -1,52 +1,52 @@
-import icon from "../src/assets/icon.png";
+import headshot from '../src/assets/headshot.jpg'
 
 interface IConfig {
   me: {
-    name: string;
-    job: string;
-    started: string;
-    stack: string;
-    hobby: string;
-    projectLink: string;
-  };
-  socials: {
-    [name: string]: string;
-  };
-  projects: {
-    [name: string]: {
-      url: string;
-      tags: string[];
-    };
-  };
+    name: string
+    job: string
+    started: string
+    stack: string
+    hobby: string
+    projectLink: string
+  }
+  socials: Record<string, string>
+  projects: Record<
+    string,
+    {
+      url: string
+      tags: string[]
+    }
+  >
   og: {
-    image: string;
-  };
+    image: string
+  }
 }
 
 export const Config: IConfig = {
   me: {
-    name: "John Doe",
-    job: "backend engineer",
-    started: "1970-01-01",
-    stack: "Scratch",
-    hobby: "gamble my life savings",
-    projectLink: "https://github.com/JohnDoe?tab=repositories",
+    name: 'Khalifa Idris',
+    job: 'Senior Backend Engineer & JavaScript Coach',
+    started: '2018-08-01',
+    stack: 'React, NestJS, GCP & Python',
+    hobby: 'take pictures, weight lift & travel',
+    projectLink: 'https://github.com/unclekhalifa?tab=repositories',
   },
   socials: {
-    twitter: "https://twitter.com/JohnDoe",
-    github: "https://github.com/JohnDoe",
+    linkedin: 'https://linkedin.com/in/khalifa-idris',
+    github: 'https://github.com/unclekhalifa',
   },
   projects: {
-    "996.ICU": {
-      url: "https://github.com/996icu/996.ICU",
-      tags: ["ccp", "chinese", "overwork", "labor", "996"],
+    'Rate My CV': {
+      // FIXME: Add the correct URL
+      url: 'https://github.com/unclekhalifa',
+      tags: ['ccp', 'chinese', 'overwork', 'labor', '996'],
     },
-    Linux: {
-      url: "https://github.com/torvalds/linux",
-      tags: ["c", "kernel", "unix", "os"],
+    Workbug: {
+      url: 'https://apps.apple.com/gb/app/workbug/id1380295904',
+      tags: ['ios', 'mongodb', 'realm', 'react'],
     },
   },
   og: {
-    image: icon.src,
+    image: headshot.src,
   },
-};
+}
