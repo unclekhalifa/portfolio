@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import FloatingBox from "../components/SmallBox.astro";
 import { Picture } from "astro:assets";
-import iconImage from "../assets/icon.png";
+import headshotImage from "../assets/headshot.jpg";
 import { Config } from "../config";
 
 const years = () => {
@@ -26,7 +26,7 @@ const posts = (await getCollection("posts")).sort(function (
       <article class="md:flex-row-reverse md:justify-end md:gap-12">
         <div class="flex flex-row justify-between sm:grid-cols-3">
           <div class="col-span-2 flex flex-col gap-6 md:gap-8 my-auto">
-            <h1 class="text-3xl">Hi, I’m {Config.me.name.split(" ")[0]}</h1>
+            <h1 class="text-3xl">Hi, I’m {Config.me.name.split(" ")[0]} 👋🏾</h1>
             <h2 class="w-auto sm:w-[85%] md:w-[90%] leading-6">
               I am a <strong class="font-normal text-primary"
                 >{Config.me.job}</strong
@@ -62,7 +62,7 @@ const posts = (await getCollection("posts")).sort(function (
             <div class="avatar">
               <div class="w-60 rounded">
                 <Picture
-                  src={iconImage}
+                  src={headshotImage}
                   formats={["avif", "webp"]}
                   alt="Profile icon"
                   loading="eager"

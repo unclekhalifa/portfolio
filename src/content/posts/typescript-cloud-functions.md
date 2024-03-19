@@ -1,6 +1,6 @@
 ---
-title: Lorem Ipsum 2
-description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+title: TypeScript-based Cloud Functions
+description: Learn how to build cloud functions using TypeScript and deploy them to Google Cloud Functions.
 publishedAt: 2024-04-01
 ---
 

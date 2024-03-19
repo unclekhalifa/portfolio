@@ -1,7 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import { Config } from "../config";
-import icon from "../assets/icon.png";
+import headshot from "../assets/headshot.jpg";
 
 interface Props {
   title?: string;
@@ -25,11 +25,11 @@ const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
-<html class="bg-base-100 text-base-content overflow-y-scroll" lang="en">
+<html data-theme="synthwave" class="text-base-content overflow-y-scroll" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href={icon.src} />
+    <link rel="headshot" type="image/svg+xml" href={headshot.src} />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={og_title} />

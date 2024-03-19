@@ -1,7 +1,7 @@
 ---
-title: Lorem Ipsum
-description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
-publishedAt: 2024-03-12
+title: Building Hubspot Workflows via API
+description: HubSpot workflows are a powerful tool for automating your marketing and sales processes. Learn how to build workflows in HubSpot.
+publishedAt: 2024-03-19
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue tortor, blandit ac tellus non, auctor viverra elit. Cras at odio auctor, tristique ex eu, pellentesque augue. Nulla facilisi. Donec ac lacinia diam, nec pulvinar purus. Suspendisse eget massa quis nulla blandit condimentum sit amet nec nibh. Aenean semper quis ipsum et dapibus. Duis pharetra molestie ultrices. Etiam diam quam, dictum eu magna ac, pulvinar euismod metus. Donec porttitor nec magna sed egestas. Praesent vehicula dictum dapibus. In euismod vitae neque suscipit bibendum. Proin a nisi nec urna blandit cursus ac a turpis. Nulla dictum, magna in aliquet posuere, augue orci fringilla neque, eu suscipit enim ante vel ex. Suspendisse purus lacus, sodales sed vehicula quis, egestas in diam. Nulla facilisi. Praesent bibendum tortor lectus, aliquet varius justo cursus eu.
