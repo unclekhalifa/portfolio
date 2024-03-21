@@ -25,7 +25,7 @@ interface IConfig {
 export const Config: IConfig = {
   me: {
     name: 'Khalifa Idris',
-    job: 'Senior Backend Engineer & JavaScript Coach',
+    job: 'Senior Fullstack Engineer & JavaScript Coach',
     started: '2018-08-01',
     stack: 'React, NestJS, GCP & Python',
     hobby: 'take pictures, weight lift & travel',
