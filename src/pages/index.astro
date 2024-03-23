@@ -4,6 +4,8 @@ import FloatingBox from "../components/SmallBox.astro";
 import { Picture } from "astro:assets";
 import headshotImage from "../assets/headshot.jpg";
 import { Config } from "../config";
+import {type SanityArticle} from '../types'
+import {sanityClient} from 'sanity:client';
 
 const years = () => {
   const start = new Date(Config.me.started);
@@ -11,13 +13,10 @@ const years = () => {
   return now.getFullYear() - start.getFullYear();
 };
 
-import { getCollection } from "astro:content";
-const posts = (await getCollection("posts")).sort(function (
-  first: any,
-  second: any
-) {
-  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
-});
+const sanityArticles = await sanityClient.fetch(`*[_type == "article"]`);
+  const articles = sanityArticles.map(({slug, title, description, body, _createdAt}: {slug: {current: string}, title: string, description: string, body: string, _createdAt: string}) => (
+   {slug: slug.current, title, description, body, createdAt: _createdAt})
+  ).sort((a: {createdAt: string}, b: {createdAt: string}) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
 ---
 
 <Layout>
@@ -115,16 +114,12 @@ const posts = (await getCollection("posts")).sort(function (
         </header>
         <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 mx-auto">
           {
-            posts.map((post: any) => (
+            articles.map(({title, description, slug, createdAt}: SanityArticle) => (
               <FloatingBox
-                title={post.data.title}
-                publishedAt={post.data.publishedAt.toLocaleDateString("en-us", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
-                description={post.data.description}
-                href={"/posts/" + post.slug}
+                title={title}
+                publishedAt={createdAt}
+                description={description}
+                href={"/posts/" + slug}
               />
             ))
           }
