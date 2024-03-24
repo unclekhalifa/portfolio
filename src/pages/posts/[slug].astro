@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { type SanityArticle } from "../../types";
 import {sanityClient} from 'sanity:client';
+import { markdown } from '@astropub/md'
 
 export async function getStaticPaths() {
   const sanityArticles = await sanityClient.fetch(`*[_type == "article"]`);
@@ -27,6 +28,6 @@ const { title, description, body } = Astro.props;
     </h1>
     <p class="mt-0 mb-1">{description}</p>
     <div class="divider m-0"></div>
-    {body}
+    {markdown(body)}
   </article>
 </Layout>
