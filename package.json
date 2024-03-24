@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write . --plugin=prettier-plugin-astro"
   },
   "peerDependencies": {
     "styled-components": "6.1.8"
@@ -40,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "6.4.0",
     "daisyui": "4.7.3",
     "prettier": "3.2.5",
+    "prettier-plugin-astro": "0.13.0",
     "typescript": "5.4.2",
     "vite": "5.1.6"
   }

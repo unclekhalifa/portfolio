@@ -1,13 +1,12 @@
 ---
 interface Props {
-  title: string;
-  publishedAt: Date;
-  description?: string;
-  href: string;
-  tags?: string[];
+  title: string
+  createdAt: Date
+  description?: string
+  href: string
 }
 
-const { title, publishedAt, description, href } = Astro.props;
+const { title, createdAt, description, href } = Astro.props
 ---
 
 <a
@@ -20,10 +19,10 @@ const { title, publishedAt, description, href } = Astro.props;
     <div class="flex flex-row items-center gap-4">
       <p class="text-neutral">
         {
-          new Date(publishedAt).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
+          new Date(createdAt).toLocaleDateString('en-us', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
           })
         }
       </p>
