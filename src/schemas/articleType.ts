@@ -30,7 +30,7 @@ export const articleType = defineType({
     }),
     defineField({
       name: 'body',
-      type: 'text',
+      type: 'markdown',
     }),
   ],
 })
