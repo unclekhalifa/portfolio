@@ -1,35 +1,33 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { type SanityArticle } from "../../types";
+import {sanityClient} from 'sanity:client';
+import { markdown } from '@astropub/md'
 
 export async function getStaticPaths() {
-  const posts = await getCollection("posts");
+  const sanityArticles = await sanityClient.fetch(`*[_type == "article"]`);
+  return sanityArticles.map(({slug, title, description, body}: SanityArticle) => ({
+      params: {slug: slug.current},
+        props: {title, description, body}
+    }));
+}
 
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
-}
-interface Props {
-  post: CollectionEntry<"posts">;
-}
-const { post } = Astro.props;
-const { Content } = await post.render();
+const { title, description, body } = Astro.props;
 ---
 
 <Layout
-  title={post.data.title}
-  description={post.data.description}
-  og_title={post.data.title}
-  og_description={post.data.description}
+  title={title}
+  description={description}
+  og_title={title}
+  og_description={description}
   og_type="article"
 >
   <article class="prose mx-auto flex w-full max-w-prose flex-col gap-4">
     <h1 class="mb-0">
-      {post.data.title}
+      {title}
     </h1>
-    <p class="mt-0 mb-1">{post.data.description}</p>
+    <p class="mt-0 mb-1">{description}</p>
     <div class="divider m-0"></div>
-    <Content />
+    {markdown(body)}
   </article>
 </Layout>
