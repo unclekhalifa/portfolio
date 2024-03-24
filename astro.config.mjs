@@ -10,11 +10,11 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sanity({
-      projectId: 'ksxor17g',
-      dataset: 'testing',
+      projectId: import.meta.env.PUBLIC_SANITY_PROJECT_ID,
+      dataset: import.meta.env.PUBLIC_SANITY_DATASET,
       useCdn: true,
       apiVersion: '2024-03-23',
-      studioBasePath: '/studio',
+      studioBasePath: import.meta.env.PUBLIC_SANITY_STUDIO_BASE_PATH,
     }),
     react(),
   ],
