@@ -4,6 +4,11 @@ import tailwind from '@astrojs/tailwind'
 import sanity from '@sanity/astro'
 import react from '@astrojs/react'
 
+if (process.env.NODE_ENV === 'development') {
+  const { config } = await import('dotenv')
+  config()
+}
+
 // https://astro.build/config
 export default defineConfig({
   prefetch: true,

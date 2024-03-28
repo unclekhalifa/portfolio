@@ -1,15 +1,15 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-import { Config } from "../config";
-import headshot from "../assets/headshot.jpg";
+import { ViewTransitions } from 'astro:transitions'
+import { Config } from '../config'
+import headshot from '../assets/headshot.jpg'
 
 interface Props {
-  title?: string;
-  description?: string;
-  og_title?: string;
-  og_description?: string;
-  og_type?: string;
-  og_image?: string;
+  title?: string
+  description?: string
+  og_title?: string
+  og_description?: string
+  og_type?: string
+  og_image?: string
 }
 
 const {
@@ -17,15 +17,19 @@ const {
   description = Config.me.name + "'s personal website.",
   og_title = Config.me.name,
   og_description = Config.me.name + "'s personal website.",
-  og_type = "website",
+  og_type = 'website',
   og_image = Config.og.image,
-} = Astro.props;
+} = Astro.props
 
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname
 ---
 
 <!doctype html>
-<html data-theme="dracula" class="text-base-content overflow-y-scroll" lang="en">
+<html
+  data-theme="dracula"
+  class="text-base-content overflow-y-scroll"
+  lang="en"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -38,8 +42,8 @@ const currentPath = Astro.url.pathname;
     <meta property="og:image" content={og_image} />
     <meta property="og:url" content={Astro.request.url} />
     <script>
-      import { initializeApp } from 'firebase/app';
-      import { getAnalytics } from 'firebase/analytics';
+      import { initializeApp } from 'firebase/app'
+      import { getAnalytics } from 'firebase/analytics'
 
       // Your web app's Firebase configuration
       const firebaseConfig = {
@@ -50,11 +54,11 @@ const currentPath = Astro.url.pathname;
         messagingSenderId: '1073353935403',
         appId: '1:1073353935403:web:53be3a0e6e8b287bbc386e',
         measurementId: 'G-RRQ245ERE5',
-      };
+      }
 
       // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      getAnalytics(app);
+      const app = initializeApp(firebaseConfig)
+      getAnalytics(app)
     </script>
     <ViewTransitions />
   </head>
@@ -69,13 +73,13 @@ const currentPath = Astro.url.pathname;
         <nav class="text-sm custom-breadcrumbs">
           <ul>
             <li>
-              <a class={currentPath === "/" ? "text-primary" : ""} href="/"
+              <a class={currentPath === '/' ? 'text-primary' : ''} href="/"
                 >Home</a
               >
             </li>
             <li>
               <a
-                class={currentPath.startsWith("/posts") ? "text-primary" : ""}
+                class={currentPath.startsWith('/posts') ? 'text-primary' : ''}
                 href="/posts">Posts</a
               >
             </li>
@@ -126,7 +130,7 @@ const currentPath = Astro.url.pathname;
       }
 
       .custom-breadcrumbs > ul > li + *:before {
-        content: "/";
+        content: '/';
         margin-left: 0.5rem /* 8px */;
         margin-right: 0.75rem /* 12px */;
         display: block;
@@ -134,7 +138,7 @@ const currentPath = Astro.url.pathname;
         background-color: transparent;
       }
 
-      [dir="rtl"] .custom-breadcrumbs > ul > li + *:before {
+      [dir='rtl'] .custom-breadcrumbs > ul > li + *:before {
         --tw-rotate: -180deg;
       }
     </style>

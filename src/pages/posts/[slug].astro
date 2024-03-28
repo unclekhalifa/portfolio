@@ -1,18 +1,20 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { type SanityArticle } from "../../types";
-import {sanityClient} from 'sanity:client';
+import Layout from '../../layouts/Layout.astro'
+import { type SanityArticle } from '../../types'
+import { sanityClient } from 'sanity:client'
 import { markdown } from '@astropub/md'
 
 export async function getStaticPaths() {
-  const sanityArticles = await sanityClient.fetch(`*[_type == "article"]`);
-  return sanityArticles.map(({slug, title, description, body}: SanityArticle) => ({
-      params: {slug: slug.current},
-        props: {title, description, body}
-    }));
+  const sanityArticles = await sanityClient.fetch(`*[_type == "article"]`)
+  return sanityArticles.map(
+    ({ slug, title, description, body }: SanityArticle) => ({
+      params: { slug: slug.current },
+      props: { title, description, body },
+    }),
+  )
 }
 
-const { title, description, body } = Astro.props;
+const { title, description, body } = Astro.props
 ---
 
 <Layout

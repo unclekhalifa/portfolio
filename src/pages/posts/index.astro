@@ -1,25 +1,49 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import PostBox from "../../components/PostBox.astro";
-import { getCollection } from "astro:content";
-const posts = (await getCollection("posts")).sort(
-  (a, b) =>
-    new Date(b.data.publishedAt).getTime() -
-    new Date(a.data.publishedAt).getTime()
-);
+import Layout from '../../layouts/Layout.astro'
+import PostBox from '../../components/PostBox.astro'
+import type { SanityArticle } from '../../types'
+import { sanityClient } from 'sanity:client'
+
+const sanityArticles = await sanityClient.fetch(`*[_type == "article"]`)
+const articles = sanityArticles
+  .map(
+    ({
+      slug,
+      title,
+      description,
+      body,
+      _createdAt,
+    }: {
+      slug: { current: string }
+      title: string
+      description: string
+      body: string
+      _createdAt: string
+    }) => ({
+      slug: slug.current,
+      title,
+      description,
+      body,
+      createdAt: _createdAt,
+    }),
+  )
+  .sort(
+    (a: { createdAt: string }, b: { createdAt: string }) =>
+      new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
+  )
 ---
 
 <Layout og_type="website">
   <div>
     {
-      posts.map((post) => (
+      articles.map(({ title, description, slug, createdAt }: SanityArticle) => (
         <>
           <div class="divider my-2" />
           <PostBox
-            title={post.data.title}
-            publishedAt={post.data.publishedAt}
-            description={post.data.description}
-            href={post.slug}
+            title={title}
+            createdAt={createdAt}
+            description={description}
+            href={slug}
           />
         </>
       ))

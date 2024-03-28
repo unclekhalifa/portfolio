@@ -1,18 +1,18 @@
 ---
 interface Props {
-  title: string;
-  publishedAt?: Date;
-  description?: string;
-  href: string;
-  tags?: string[];
+  title: string
+  publishedAt?: Date
+  description?: string
+  href: string
+  tags?: string[]
 }
 
-const { title, publishedAt, description, href, tags } = Astro.props;
+const { title, publishedAt, description, href, tags } = Astro.props
 ---
 
 <a
   href={href}
-  target={href.startsWith("http") ? "_blank" : "_self"}
+  target={href.startsWith('http') ? '_blank' : '_self'}
   class="group flex cursor-pointer flex-col gap-2 rounded-md border border-neutral p-4 transition-all duration-300 hover:-translate-y-1.5"
   data-astro-prefetch
 >
@@ -22,10 +22,10 @@ const { title, publishedAt, description, href, tags } = Astro.props;
       {
         publishedAt ? (
           <p class="text-primary whitespace-nowrap">
-            {new Date(publishedAt).toLocaleDateString("en-us", {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
+            {new Date(publishedAt).toLocaleDateString('en-us', {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
             })}
           </p>
         ) : null
