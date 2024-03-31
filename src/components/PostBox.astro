@@ -17,7 +17,7 @@ const { title, createdAt, description, href } = Astro.props
   <div class="flex w-full justify-between gap-2 flex-row items-center">
     <p class="text-base-content font-semibold">{title}</p>
     <div class="flex flex-row items-center gap-4">
-      <p class="text-neutral">
+      <p class="text-primary">
         {
           new Date(createdAt).toLocaleDateString('en-us', {
             year: 'numeric',
