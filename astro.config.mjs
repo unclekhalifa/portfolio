@@ -15,11 +15,11 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sanity({
-      projectId: process.env.PUBLIC_SANITY_PROJECT_ID,
-      dataset: process.env.PUBLIC_SANITY_DATASET,
+      projectId: process.env.SANITY_PROJECT_ID,
+      dataset: process.env.SANITY_DATASET,
       useCdn: true,
       apiVersion: '2024-03-23',
-      studioBasePath: process.env.PUBLIC_SANITY_STUDIO_BASE_PATH,
+      studioBasePath: process.env.SANITY_STUDIO_BASE_PATH,
     }),
     react(),
   ],

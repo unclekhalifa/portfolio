@@ -17,6 +17,11 @@ export async function getStaticPaths() {
 const { title, description, body } = Astro.props
 ---
 
+<style>
+  .markdown-content {
+    margin: 0;
+  }
+</style>
 <Layout
   title={title}
   description={description}
@@ -30,7 +35,9 @@ const { title, description, body } = Astro.props
     </h1>
     <p class="mt-0 mb-1">{description}</p>
     <div class="divider m-0"></div>
-    {markdown(body)}
+    <div class="markdown-content">
+      {markdown(body)}
+    </div>
     <a href="https://www.buymeacoffee.com/unclekhalifa" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
   </article>
 </Layout>
