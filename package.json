@@ -1,7 +1,7 @@
 {
   "name": "portofolio",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "Apache-2.0",
   "scripts": {
     "dev": "astro dev",
@@ -9,7 +9,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write . --plugin=prettier-plugin-astro"
+    "format": "prettier --write . --plugin=prettier-plugin-astro",
+    "prepare": "husky"
   },
   "peerDependencies": {
     "styled-components": "6.1.8"
@@ -41,6 +42,7 @@
     "@typescript-eslint/eslint-plugin": "6.4.0",
     "daisyui": "4.7.3",
     "dotenv": "16.4.5",
+    "husky": "9.0.11",
     "prettier": "3.2.5",
     "prettier-plugin-astro": "0.13.0",
     "typescript": "5.4.2",
